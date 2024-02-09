@@ -78,7 +78,9 @@ requirements.
   using ORM methods. These functions may be spread across different models.
 - For **EACH** class in the data model, the CLI must at least read and display objects.
 - The CLI should validate user input and object creations/deletions, providing
-  informative errors to the user.
+  informative errors to the user. In other words, no user input should cause the app
+  to "error out" and crash to the prompt line, but should guide the user to inputting
+  proper information.
 
 # Project Environment, Configuration, Documentation
 
