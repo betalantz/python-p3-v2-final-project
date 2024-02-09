@@ -61,23 +61,22 @@ requirements.
 ### ORM Requirements
 
 - The application must include a database created and modified with Python ORM
-  methods that you write.
+  methods using an ORM such as SQLAlchemy.
 
   - The data model must include **at least 2** model classes.
   - The data model must include **at least 1** one-to-many relationships.
-  - Property methods should be defined to add appropriate constraints to each
-    model class.
-  - Each model class should include ORM methods (create, delete, get all, and
-    find by id at minimum).
+  - Add appropriate constraints using the ORM to the columns on your data models.
+  - Each model class should inherit from your ORM library.
 
 ### CLI Requirements
 
 - The CLI must display menus with which a user may interact.
 - The CLI should use loops as needed to keep the user in the application until
   they choose to exit.
-- For **EACH** class in the data model, the CLI must include options: to create
-  an object, delete an object, display all objects, view related objects, and
-  find an object by attribute.
+- The CLI must include options: to create an object, delete an object,
+  display all objects, view related objects, and find an object by attribute
+  using ORM methods. These functions may be spread across different models.
+- For **EACH** class in the data model, the CLI must at least read and display objects.
 - The CLI should validate user input and object creations/deletions, providing
   informative errors to the user.
 
@@ -96,7 +95,7 @@ input, and confirm your application prints a useful error message.
 
 ## How to begin?
 
-- Start with the project template (provided in the following lesson). You are
+- Start with the project template (provided in [this repo][template]). You are
   free to adapt the template structure, as long as you adhere to the project
   requirements.
 - Think about the user interaction. How will you prompt the user? What
@@ -112,8 +111,10 @@ input, and confirm your application prints a useful error message.
 
 ## Resources
 
+- [Flatiron CLI Project Generator][template]
 - [Click documentation][click]
 - [The Python Fire Guide][fire]
 
 [click]: https://click.palletsprojects.com/en/8.1.x/
 [fire]: https://google.github.io/python-fire/guide/
+[template]: https://github.com/learn-co-students/flatiron-cli-project-generator
